@@ -1,0 +1,118 @@
+/* Header container with relative positioning */
+.header {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+}
+
+/* Header image styling */
+.header-image {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    padding: 0 4rem;
+    box-sizing: border-box;
+    border-radius: 30px
+}
+
+.header-image img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 30px
+}
+
+/* Header text container with absolute positioning */
+.header-text {
+    position: absolute;
+    height: 3rem;
+    width: 50%;
+    top: 30%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    z-index: 2;
+}
+
+/* Header text styling */
+.header-text h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.header-text h4 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    position: relative;
+    max-width: 500px;
+}
+
+/* Button styling with absolute positioning within text container */
+.header-text button {
+    position: relative;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 77, 77, 0.4);
+}
+
+.header-text button:hover {
+    background-color: #ff3333;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 77, 77, 0.6);
+}
+
+.header-text button:active {
+    transform: translateY(0);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .header-image {
+        padding: 0 1rem;
+    }
+    
+    .header-text {
+        left: 5%;
+        padding: 0 20px;
+    }
+    
+    .header-text h1 {
+        font-size: 2.5rem;
+    }
+    
+    .header-text h4 {
+        font-size: 1.2rem;
+    }
+    
+    .header-text button {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-image {
+        padding: 0 0.8rem;
+    }
+    
+    .header-text h1 {
+        font-size: 2rem;
+    }
+    
+    .header-text h4 {
+        font-size: 1rem;
+    }
+}
